@@ -1,0 +1,20 @@
+TAP version 13
+ok 1 - Icecave\Druid\UuidTest::testFromString
+ok 2 - Icecave\Druid\UuidTest::testFromStringFailureTooShort
+ok 3 - Icecave\Druid\UuidTest::testFromStringFailureTooLong
+ok 4 - Icecave\Druid\UuidTest::testFromBytes
+ok 5 - Icecave\Druid\UuidTest::testFromBytesFailureTooShort
+ok 6 - Icecave\Druid\UuidTest::testFromBytesFailureTooLong
+ok 7 - Icecave\Druid\UuidTest::testTimeLowHi
+ok 8 - Icecave\Druid\UuidTest::testTimeLowLow
+ok 9 - Icecave\Druid\UuidTest::testTimeMid
+ok 10 - Icecave\Druid\UuidTest::testTimeHi
+ok 11 - Icecave\Druid\UuidTest::testClockSeqHi
+ok 12 - Icecave\Druid\UuidTest::testClockSeqLow
+ok 13 - Icecave\Druid\UuidTest::testNodeHi
+ok 14 - Icecave\Druid\UuidTest::testNodeMid
+ok 15 - Icecave\Druid\UuidTest::testNodeLow
+ok 16 - Icecave\Druid\UuidTest::testString
+ok 17 - Icecave\Druid\UuidTest::testBytes
+ok 18 - Icecave\Druid\UuidVersion4FactoryTest::testCreate
+1..18
