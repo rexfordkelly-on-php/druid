@@ -25,6 +25,22 @@
                 <p>class    <strong>Uuid</strong>        implements
         <a href="../../Icecave/Druid/UuidInterface.html"><abbr title="Icecave\Druid\UuidInterface">UuidInterface</abbr></a></p>
 
+            <div class="description">
+            <p>An RFC-4122 universally unique identifier (UUID).</p>
+            <p>A UUID is a 16-byte (128-bit) number with the following fields:</p>
+
+<p>0               1               2               3
+ 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| time<em>low (32-bits)                                            |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| time</em>mid (16-bits)            | time<em>hi (16-bits)             |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| clk</em>seq<em>hi (8)| clk</em>seq_lo (8)|  node (48-bits)               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| node (continued)                                              |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</p>
+        </div>
     
             <h2>Constants</h2>
 
@@ -111,8 +127,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_timeLowHi">timeLowHi</a>()
-                    <p>
-</p>
+                    <p>The upper 16-bits of the RFC-4122 time_low field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -122,8 +137,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_timeLowLow">timeLowLow</a>()
-                    <p>
-</p>
+                    <p>The lower 16-bits of the RFC-4122 time_low field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -133,8 +147,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_timeMid">timeMid</a>()
-                    <p>
-</p>
+                    <p>The RFC-4122 time_mid field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -144,8 +157,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_timeHi">timeHi</a>()
-                    <p>
-</p>
+                    <p>The RFC-4122 time<em>hi</em>and_version field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -155,8 +167,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_clockSeqHi">clockSeqHi</a>()
-                    <p>
-</p>
+                    <p>The RFC-4122 clock<em>seq</em>hi<em>and</em>reserved field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -166,8 +177,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_clockSeqLow">clockSeqLow</a>()
-                    <p>
-</p>
+                    <p>The RFC-4122 clock<em>seq</em>low field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -177,8 +187,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_nodeHi">nodeHi</a>()
-                    <p>
-</p>
+                    <p>The upper 16-bits of the RFC-4122 node field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -188,8 +197,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_nodeMid">nodeMid</a>()
-                    <p>
-</p>
+                    <p>The middle 16-bits of the RFC-4122 node field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -199,8 +207,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_nodeLow">nodeLow</a>()
-                    <p>
-</p>
+                    <p>The lower 16-bits of the RFC-4122 node field.</p>
                 </td>
                 <td></td>
             </tr>
@@ -210,8 +217,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_string">string</a>()
-                    <p>
-</p>
+                    <p>Generate a string representation of this UUID.</p>
                 </td>
                 <td></td>
             </tr>
@@ -221,8 +227,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_bytes">bytes</a>()
-                    <p>
-</p>
+                    <p>Get the raw binary representation of this UUID.</p>
                 </td>
                 <td></td>
             </tr>
@@ -232,7 +237,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 20</div>
+        <div class="location">at line 39</div>
         <code>            public            
     <strong>__construct</strong>(integer $timeLowHi, integer $timeLowLow, integer $timeMid, integer $timeHi, integer $clockSeqHi, integer $clockSeqLow, integer $nodeHi, integer $nodeMid, integer $nodeLow)</code>
     </h3>
@@ -248,56 +253,47 @@
                     <tr>
                 <td>integer</td>
                 <td>$timeLowHi</td>
-                <td>
-</td>
+                <td>The upper 16-bits of the RFC-4122 time_low field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$timeLowLow</td>
-                <td>
-</td>
+                <td>The lower 16-bits of the RFC-4122 time_low field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$timeMid</td>
-                <td>
-</td>
+                <td>The RFC-4122 time_mid field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$timeHi</td>
-                <td>
-</td>
+                <td>The RFC-4122 time<em>hi</em>and_version field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$clockSeqHi</td>
-                <td>
-</td>
+                <td>The RFC-4122 clock<em>seq</em>hi<em>and</em>reserved field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$clockSeqLow</td>
-                <td>
-</td>
+                <td>The RFC-4122 clock<em>seq</em>low field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$nodeHi</td>
-                <td>
-</td>
+                <td>The upper 16-bits of the RFC-4122 node field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$nodeMid</td>
-                <td>
-</td>
+                <td>The middle 16-bits of the RFC-4122 node field.</td>
             </tr>
                     <tr>
                 <td>integer</td>
                 <td>$nodeLow</td>
-                <td>
-</td>
+                <td>The lower 16-bits of the RFC-4122 node field.</td>
             </tr>
             </table>
 
@@ -308,7 +304,7 @@
     </div>
 
                 <h3 id="method_fromString">
-        <div class="location">at line 50</div>
+        <div class="location">at line 69</div>
         <code>        static    public            <a href="../../Icecave/Druid/Uuid.html"><abbr title="Icecave\Druid\Uuid">Uuid</abbr></a>
     <strong>fromString</strong>(string $string)</code>
     </h3>
@@ -356,7 +352,7 @@
     </div>
 
                 <h3 id="method_fromBytes">
-        <div class="location">at line 78</div>
+        <div class="location">at line 97</div>
         <code>        static    public            <a href="../../Icecave/Druid/Uuid.html"><abbr title="Icecave\Druid\Uuid">Uuid</abbr></a>
     <strong>fromBytes</strong>(string $bytes)</code>
     </h3>
@@ -404,13 +400,12 @@
     </div>
 
                 <h3 id="method_timeLowHi">
-        <div class="location">at line 104</div>
+        <div class="location">at line 125</div>
         <code>            public            integer
     <strong>timeLowHi</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The upper 16-bits of the RFC-4122 time_low field.</p>
         <p>
 </p>
         <div class="tags">
@@ -420,8 +415,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The upper 16-bits of the RFC-4122 time_low field.</td>
         </tr>
     </table>
 
@@ -431,13 +425,12 @@
     </div>
 
                 <h3 id="method_timeLowLow">
-        <div class="location">at line 114</div>
+        <div class="location">at line 137</div>
         <code>            public            integer
     <strong>timeLowLow</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The lower 16-bits of the RFC-4122 time_low field.</p>
         <p>
 </p>
         <div class="tags">
@@ -447,8 +440,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The lower 16-bits of the RFC-4122 time_low field.</td>
         </tr>
     </table>
 
@@ -458,13 +450,12 @@
     </div>
 
                 <h3 id="method_timeMid">
-        <div class="location">at line 124</div>
+        <div class="location">at line 149</div>
         <code>            public            integer
     <strong>timeMid</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The RFC-4122 time_mid field.</p>
         <p>
 </p>
         <div class="tags">
@@ -474,8 +465,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The RFC-4122 time_mid field.</td>
         </tr>
     </table>
 
@@ -485,13 +475,12 @@
     </div>
 
                 <h3 id="method_timeHi">
-        <div class="location">at line 134</div>
+        <div class="location">at line 161</div>
         <code>            public            integer
     <strong>timeHi</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The RFC-4122 time<em>hi</em>and_version field.</p>
         <p>
 </p>
         <div class="tags">
@@ -501,8 +490,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The RFC-4122 time<em>hi</em>and_version field.</td>
         </tr>
     </table>
 
@@ -512,13 +500,12 @@
     </div>
 
                 <h3 id="method_clockSeqHi">
-        <div class="location">at line 144</div>
+        <div class="location">at line 173</div>
         <code>            public            integer
     <strong>clockSeqHi</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The RFC-4122 clock<em>seq</em>hi<em>and</em>reserved field.</p>
         <p>
 </p>
         <div class="tags">
@@ -528,8 +515,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The RFC-4122 clock<em>seq</em>hi<em>and</em>reserved field.</td>
         </tr>
     </table>
 
@@ -539,13 +525,12 @@
     </div>
 
                 <h3 id="method_clockSeqLow">
-        <div class="location">at line 154</div>
+        <div class="location">at line 185</div>
         <code>            public            integer
     <strong>clockSeqLow</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The RFC-4122 clock<em>seq</em>low field.</p>
         <p>
 </p>
         <div class="tags">
@@ -555,8 +540,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The RFC-4122 clock<em>seq</em>low field.</td>
         </tr>
     </table>
 
@@ -566,13 +550,12 @@
     </div>
 
                 <h3 id="method_nodeHi">
-        <div class="location">at line 164</div>
+        <div class="location">at line 197</div>
         <code>            public            integer
     <strong>nodeHi</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The upper 16-bits of the RFC-4122 node field.</p>
         <p>
 </p>
         <div class="tags">
@@ -582,8 +565,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The upper 16-bits of the RFC-4122 node field.</td>
         </tr>
     </table>
 
@@ -593,13 +575,12 @@
     </div>
 
                 <h3 id="method_nodeMid">
-        <div class="location">at line 174</div>
+        <div class="location">at line 209</div>
         <code>            public            integer
     <strong>nodeMid</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The middle 16-bits of the RFC-4122 node field.</p>
         <p>
 </p>
         <div class="tags">
@@ -609,8 +590,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The middle 16-bits of the RFC-4122 node field.</td>
         </tr>
     </table>
 
@@ -620,13 +600,12 @@
     </div>
 
                 <h3 id="method_nodeLow">
-        <div class="location">at line 184</div>
+        <div class="location">at line 221</div>
         <code>            public            integer
     <strong>nodeLow</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>The lower 16-bits of the RFC-4122 node field.</p>
         <p>
 </p>
         <div class="tags">
@@ -636,8 +615,7 @@
                     <table>
         <tr>
             <td>integer</td>
-            <td>
-</td>
+            <td>The lower 16-bits of the RFC-4122 node field.</td>
         </tr>
     </table>
 
@@ -647,13 +625,12 @@
     </div>
 
                 <h3 id="method_string">
-        <div class="location">at line 194</div>
+        <div class="location">at line 233</div>
         <code>            public            string
     <strong>string</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Generate a string representation of this UUID.</p>
         <p>
 </p>
         <div class="tags">
@@ -663,8 +640,7 @@
                     <table>
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td>A string representation of this UUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.</td>
         </tr>
     </table>
 
@@ -674,13 +650,12 @@
     </div>
 
                 <h3 id="method_bytes">
-        <div class="location">at line 215</div>
+        <div class="location">at line 256</div>
         <code>            public            string
     <strong>bytes</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Get the raw binary representation of this UUID.</p>
         <p>
 </p>
         <div class="tags">
@@ -690,8 +665,7 @@
                     <table>
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td>A 16-byte binary representation of this UUID.</td>
         </tr>
     </table>
 
